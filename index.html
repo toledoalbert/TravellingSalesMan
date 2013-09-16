@@ -1,0 +1,90 @@
+<div>
+	<script type="text/javascript" src="http://johannes-beck.name/js/salesman.js"></script>
+	<script type="text/javascript" src="http://johannes-beck.name/js/jquery-1.9.1.min.js"></script>
+	
+	<br>
+
+	<section id="content" style="width: 1000px; padding-top: 20px;">
+		
+		<canvas id="canvas" width="540" height="480" style="float:left; border: 1px solid silver; background: url(http://johannes-beck.name/images/grid-20-20.png) top left; display: block; margin-left: 20px;">
+		</canvas>
+
+		<br>
+		
+		<form id="parameters" style="float:left; margin-left: 2em; margin-right: 1em; margin-top: 0; margin-bottom: 0; font-size: medium;">
+			
+			<fieldset>
+				
+				<h3 style="padding-top: 0px; font-size: x-large">Parameters</h3>
+				
+				<p>
+					<span>
+						<label for="cities">No. of cities</label>
+						<input id="cities" type="number" name="cities" size="4" maxlength="4" style="float: right;" x-webkit-speech="">
+					</span>
+					
+					<br clear="all/">
+
+					<br>
+					
+					<label for="maxCycles">Max. No. of cycles</label>
+
+					<input id="maxCycles" type="number" name="maxCycles" size="4" maxlength="4" style="float: right;" x-webkit-speech="">
+
+					<br clear="all/"><br>
+					
+					<label for="gain">Gain</label>
+
+					<input id="gain" type="number" name="gain" size="3" maxlength="3" style="float: right;" x-webkit-speech="">
+
+					<br clear="all/"><br>
+					
+					<label for="alpha">α</label>
+
+					<input id="alpha" type="number" name="alpha" size="6" maxlength="6" style="float: right;" x-webkit-speech="">
+
+					<br clear="all/"><br>
+
+					<input id="run" type="button" value="Run" style="margin-right: 10px;" x-webkit-speech="">
+
+					<input id="stop" type="button" value="Stop" x-webkit-speech="" disabled="disabled"></p>
+				</fieldset>
+				
+				<fieldset>
+					
+					<h3 style="padding-top: 0px; font-size: x-large;">Simulation status</h3>
+					
+					<p>
+						<label for="cycle">Cycle</label>
+
+						<input id="cycle" type="text" name="cycle" disabled="disabled" size="4" style="float: right;" x-webkit-speech="">
+
+						<br clear="all/"><br>
+
+						<label for="length">Length of tour</label>
+
+						<input id="length" type="text" name="length" disabled="disabled" size="16" style="float: right;" x-webkit-speech="">
+
+						<br clear="all/"><br>
+						
+						<label for="done">Finished?</label>
+
+						<input id="done" type="checkbox" name="done" disabled="disabled" style="float: right;" x-webkit-speech="">
+
+						<br clear="all/">
+					</p>
+
+				</fieldset>
+				
+			</form>
+
+		</section>
+
+		<p>
+
+			<script type="text/javascript">$(document).ready(function() {var tsp = new TravelingSalesman(); tsp.setupForm();});
+			</script>
+
+		</p>
+
+	</div>
