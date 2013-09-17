@@ -34,7 +34,12 @@
 		.formField {
 			border: none;
 			padding: 3px 3px 3px 3px;
-			font-size: 15px;}
+			font-size: 15px;
+		}
+
+		.hidden{
+			visibility: hidden;
+		}
 
 	</style>
 </head>
@@ -71,23 +76,22 @@
 
 						<br clear="all/">
 
-						<br>
 
-						<label for="maxCycles">Max. No. of cycles</label>
+						<label class="hidden" for="maxCycles">Max. No. of cycles</label>
 
-						<input id="maxCycles" class="formField" type="number" name="maxCycles" size="4" maxlength="4" style="float: right;" x-webkit-speech="">
-
-						<br clear="all/"><br>
-
-						<label for="gain">Gain</label>
-
-						<input id="gain" class="formField" type="number" name="gain" size="3" maxlength="3" style="float: right;" x-webkit-speech="">
+						<input id="maxCycles" class="formField hidden" type="number" name="maxCycles" size="4" maxlength="4" style="float: right;" x-webkit-speech="">
 
 						<br clear="all/"><br>
 
-						<label for="alpha">Alpha</label>
+						<label class="hidden" for="gain">Gain</label>
 
-						<input id="alpha" class="formField" type="number" name="alpha" size="6" maxlength="6" style="float: right;" x-webkit-speech="">
+						<input id="gain" class="formField hidden" type="number" name="gain" size="3" maxlength="3" style="float: right;" x-webkit-speech="">
+
+						<br clear="all/"><br>
+
+						<label class="hidden" for="alpha">Alpha</label>
+
+						<input id="alpha" class="formField hidden" type="number" name="alpha" size="6" maxlength="6" style="float: right;" x-webkit-speech="">
 
 						<br clear="all/"><br>
 
@@ -98,33 +102,7 @@
 
 					</fieldset>
 
-					<fieldset style="border: none; background: rgb(224, 224, 224);">
-
-						<h3 style="padding-top: 0px; font-size: x-large;">Simulation status</h3>
-
-						<p>
-
-							<label for="cycle">Cycle</label>
-
-							<input id="cycle" class="formField" type="text" name="cycle" disabled="disabled" size="4" style="float: right;" x-webkit-speech="">
-
-							<br clear="all/"><br>
-
-							<label for="length">Length of tour</label>
-
-							<input id="length" class="formField" type="text" name="length" disabled="disabled" size="16" style="float: right;" x-webkit-speech="">
-
-							<br clear="all/"><br>
-
-							<label for="done">Finished?</label>
-
-							<input id="done" type="checkbox" name="done" disabled="disabled" style="float: right;" x-webkit-speech="">
-
-							<br clear="all/">
-
-						</p>
-
-					</fieldset>
+					
 
 				</form>
 

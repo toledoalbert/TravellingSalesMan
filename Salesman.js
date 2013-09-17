@@ -143,7 +143,7 @@ Ring.prototype.duplicateNode = function(node) {
 
 //length of tour
 Ring.prototype.tourLength = function() {
-  
+
   var dist = 0.0;
   var current = this.start;
   var previous = current.left;
@@ -195,6 +195,7 @@ TravelingSalesman.prototype.deleteAllNeurons = function() {
 
 // prints positions of cities & nodes
 TravelingSalesman.prototype.print = function() {
+  
 	console.log("TSP: N= " + this.N + ", cycle=" + this.cycle + ", lastLength=" + this.lastLength);
   for (var i=0; i<this.cities.length; i++) {
   	var c = this.cities[i];
