@@ -76,6 +76,7 @@ function Ring(start) {
 
 // moves all nodes to in direction of the sample
 Ring.prototype.moveAllNodes = function(city, gain) {
+
   var current = this.start;
   var best = this.findMinimum(city);
 
@@ -127,6 +128,7 @@ Ring.prototype.deleteNode = function(node) {
 
 // a node is duplicated & inserted into the ring 
 Ring.prototype.duplicateNode = function(node) {
+
   var newNode = new Node(node.x, node.y);
   var next = node.left;
   next.right = newNode;
@@ -136,10 +138,12 @@ Ring.prototype.duplicateNode = function(node) {
   newNode.right = node;
   newNode.inhibitation = 1;
   this.length++;
+
 };
 
 //length of tour
 Ring.prototype.tourLength = function() {
+  
   var dist = 0.0;
   var current = this.start;
   var previous = current.left;
@@ -152,6 +156,7 @@ Ring.prototype.tourLength = function() {
     previous = previous.left;
   }
   return dist;
+
 };
 
 Ring.prototype.f = function(gain, n) {
@@ -264,7 +269,7 @@ TravelingSalesman.prototype.surveyRun = function() {
   }
   this.surveyFinish();
   this.gain = this.gain * (1 - this.alpha);
-  
+
   if (this.cycle++ % this.update == 0) {
     var length = this.neurons.tourLength();
   	
